@@ -1,0 +1,82 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1733969984
+bullet.gd::GDScript::-1::1733878825::0::1::::<>Area2D<>::
+bullet.tscn::PackedScene::5650907185715272702::1733960353::0::1::::<><>::res://bullet.gd<>uid://c25l7k6bh7t31::::res://icon.svg
+global.gd::GDScript::-1::1712855948::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::6730597083738766318::1712855948::1712855996::1::::<><>::
+LICENSE.md::TextFile::-1::1733960048::0::1::::<><>::
+README.md::TextFile::-1::1733967649::0::1::::<><>::
+shootBullet.gd::GDScript::-1::1733960125::0::1::::<>CharacterBody2D<>::
+stats.gd::GDScript::-1::1733878825::0::1::::<>Node<>::
+stats.tscn::PackedScene::7032696414759798182::1733960353::0::1::::<><>::res://stats.gd
+::res://Action RPG Resources/::1733957538
+::res://Action RPG Resources/Enemies/::1733957538
+Bat.png::CompressedTexture2D::7270696439496494527::1712855948::1712855997::1::::<><>::
+::res://Action RPG Resources/Music and Sounds/::1733957538
+EnemyDie.wav::AudioStreamWAV::1017070493798024984::1712855948::1712856000::1::::<><>::
+Evade.wav::AudioStreamWAV::5015335102993852204::1712855948::1712856000::1::::<><>::
+Hit.wav::AudioStreamWAV::5816219320665191040::1712855948::1712856000::1::::<><>::
+Hurt.wav::AudioStreamWAV::3500691361206650331::1712855948::1712856000::1::::<><>::
+Menu Move.wav::AudioStreamWAV::1430570603931610373::1712855948::1712856000::1::::<><>::
+Menu Select.wav::AudioStreamWAV::5619434586978369644::1712855948::1712856000::1::::<><>::
+Music.mp3::AudioStreamMP3::4042947624432006908::1712855948::1712855996::1::::<><>::
+Pause.wav::AudioStreamWAV::1831683762237243671::1712855948::1712856000::1::::<><>::
+Swipe.wav::AudioStreamWAV::7986613872841832273::1712855948::1712856000::1::::<><>::
+Unpause.wav::AudioStreamWAV::8465449685408613608::1712855948::1712856000::1::::<><>::
+::res://Action RPG Resources/Player/::1733957538
+Player.png::CompressedTexture2D::719846851732337374::1712855948::1712855998::1::::<><>::
+::res://Action RPG Resources/Shadows/::1733957538
+LargeShadow.png::CompressedTexture2D::439576921760095296::1712855948::1712855998::1::::<><>::
+MediumShadow.png::CompressedTexture2D::4025991391989241118::1712855948::1712855998::1::::<><>::
+SmallShadow.png::CompressedTexture2D::550074051195259114::1712855948::1712855998::1::::<><>::
+::res://Action RPG Resources/UI/::1733957538
+HeartUIEmpty.png::CompressedTexture2D::1822899768372756179::1712855948::1712855998::1::::<><>::
+HeartUIFull.png::CompressedTexture2D::4619260050006054136::1712855948::1712855996::1::::<><>::
+::res://Action RPG Resources/World/::1733957538
+Bush.png::CompressedTexture2D::6737839680685445270::1712855948::1712855996::1::::<><>::
+CliffTileset.png::CompressedTexture2D::5197087850305896680::1712855948::1712855996::1::::<><>::
+DirtTileset.png::CompressedTexture2D::1226084152162317725::1712855948::1712855996::1::::<><>::
+Grass.png::CompressedTexture2D::3490005339424792286::1712855948::1712855996::1::::<><>::
+GrassBackground.png::CompressedTexture2D::5581896966968438966::1712855948::1712855996::1::::<><>::
+Tree.png::CompressedTexture2D::1236266968939126263::1712855948::1712855996::1::::<><>::
+::res://Effects/::1733960353
+EnemyDeathEffect.png::CompressedTexture2D::3576193150926787748::1712855948::1715570114::1::::<><>::
+GrassEffect.png::CompressedTexture2D::6610854500292935569::1712855948::1715570114::1::::<><>::
+grassEffect.tscn::PackedScene::4178692817246382031::1733960353::0::1::::<><>::res://Effects/GrassEfffect.gd<>uid://c1gl2p1jkfuvp::::res://Effects/GrassEffect.png
+GrassEfffect.gd::GDScript::-1::1715571285::0::1::::<>Node2D<>::
+HitEffect.png::CompressedTexture2D::9048405381787296307::1712855948::1715570114::1::::<><>::
+::res://Enemy/::1733960353
+dinoyoshi.png::CompressedTexture2D::5417007968818020354::1507446586::1714094364::1::::<><>::
+enemy.gd::GDScript::-1::1733959392::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::5917414528245312513::1733960353::0::1::::<><>::res://Enemy/enemy.gd<>uid://cjgblhi6g1uis::::res://Enemy/dinoyoshi.png<>uid://cy2u1w5k32vm1::::res://Overlap/hurtbox.tscn<>uid://c7gxqnywnhifu::::res://stats.tscn<>uid://oqxac21v5dj1::::res://Action RPG Resources/Music and Sounds/EnemyDie.wav
+::res://Enemy/dinoCharactersVersion1.1/::1733957539
+changelog.txt::TextFile::-1::1507446944::0::1::::<><>::
+::res://Enemy/dinoCharactersVersion1.1/aseprite/::1733957539
+::res://Enemy/dinoCharactersVersion1.1/gifs/::1733957539
+::res://Enemy/dinoCharactersVersion1.1/misc/::1733957539
+bg.png::CompressedTexture2D::5441984789888365932::1506851826::1714086622::1::::<><>::
+shadow_2.png::CompressedTexture2D::5262676685666544043::1444699508::1714086622::1::::<><>::
+::res://Enemy/dinoCharactersVersion1.1/sheets/::1733957539
+DinoSprites - doux.png::CompressedTexture2D::4925353081175450750::1507446544::1714086622::1::::<><>::
+DinoSprites - mort.png::CompressedTexture2D::919598181483040216::1507446570::1714086622::1::::<><>::
+DinoSprites - tard.png::CompressedTexture2D::3785967129857723251::1507446556::1714086622::1::::<><>::
+::res://Enemy/shooter/::1733959891
+::res://Overlap/::1733957539
+hitbox.tscn::PackedScene::8049391958832452599::1713336889::0::1::::<><>::
+hurtbox.tscn::PackedScene::6514373786906143070::1720242245::0::1::::<><>::
+::res://Player/::1733960380
+lif.tscn::PackedScene::8541542322371946247::1733959966::0::1::::<><>::uid://dbt8kqfono75d::::res://Action RPG Resources/Enemies/Bat.png<>uid://dmxgkr22sgrrb::::res://Overlap/hitbox.tscn
+Player.gd::GDScript::-1::1733960380::0::1::::<>CharacterBody2D<>::
+player.png::CompressedTexture2D::5429830584952111803::1712855948::1733959841::1::::<><>::
+Player.tscn::PackedScene::8345594307690642671::1733960353::0::1::::<><>::res://Player/Player.gd<>uid://cjmirs8uvtq0b::::res://Player/player.png<>uid://dmxgkr22sgrrb::::res://Overlap/hitbox.tscn
+::res://Scenes/::1733960509
+bullet.tscn::PackedScene::3071301252602775184::1712855948::0::1::::<><>::res://Bullet.gd
+main.tscn::PackedScene::3093209760408417958::1733960509::0::1::::<><>::uid://dq5wypdi3wpd4::::res://Player/Player.tscn<>uid://cmrlu62cw75mo::::res://bullet.tscn<>res://shootBullet.gd<>uid://c25l7k6bh7t31::::res://icon.svg<>uid://dojm10vedpuc4::::res://World/tree.tscn<>uid://cqko7nmkibp1j::::res://Enemy/enemy.tscn<>uid://clr6a62w15xri::::res://Action RPG Resources/World/GrassBackground.png<>res://Scripts/summoner.gd<>uid://bvkp7jeij0r83::::res://World/grass.tscn
+::res://Scripts/::1733960084
+cameraFollowMouse.gd::GDScript::-1::1712855948::0::1::::<>Camera2D<>::
+summoner.gd::GDScript::-1::1733959657::0::1::::<>Node2D<>::
+::res://World/::1733960353
+bush.tscn::PackedScene::1746168544996897238::1712855948::0::1::::<><>::uid://c284h82s678qc::::res://Action RPG Resources/World/Bush.png
+grass.gd::GDScript::-1::1715571051::0::1::::<>Node2D<>::
+grass.tscn::PackedScene::3881998557194715290::1733960353::0::1::::<><>::res://World/grass.gd<>uid://bpyt44awa6mhi::::res://Action RPG Resources/World/Grass.png<>uid://cy2u1w5k32vm1::::res://Overlap/hurtbox.tscn
+tree.tscn::PackedScene::8161261642064029209::1715554263::0::1::::<><>::uid://ru4evvnrxeq6::::res://Action RPG Resources/World/Tree.png

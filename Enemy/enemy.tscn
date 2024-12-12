@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqko7nmkibp1j"]
+
+[ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_ylwra"]
+[ext_resource type="Texture2D" uid="uid://cjgblhi6g1uis" path="res://Enemy/dinoyoshi.png" id="2_t5n3y"]
+[ext_resource type="PackedScene" uid="uid://cy2u1w5k32vm1" path="res://Overlap/hurtbox.tscn" id="3_u5gfi"]
+[ext_resource type="PackedScene" uid="uid://c7gxqnywnhifu" path="res://stats.tscn" id="4_0s0lc"]
+[ext_resource type="AudioStream" uid="uid://oqxac21v5dj1" path="res://Action RPG Resources/Music and Sounds/EnemyDie.wav" id="5_lkvta"]
+
+[sub_resource type="Animation" id="Animation_holvy"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_0gi25"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_g4riv"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i7goi"]
+_data = {
+"Idle": SubResource("Animation_holvy"),
+"RESET": SubResource("Animation_0gi25"),
+"walk": SubResource("Animation_g4riv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfpo7"]
+size = Vector2(11.6667, 12.6667)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trsqw"]
+radius = 5.0
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 16
+platform_floor_layers = 4294967264
+script = ExtResource("1_ylwra")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_t5n3y")
+hframes = 24
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_i7goi")
+}
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_u5gfi")]
+scale = Vector2(1.5, 1.5)
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, 0.666667)
+shape = SubResource("RectangleShape2D_yfpo7")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_trsqw")
+
+[node name="stats" parent="." instance=ExtResource("4_0s0lc")]
+max_health = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lkvta")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="no_health" from="stats" to="." method="_on_stats_no_health"]
+
+[editable path="Hurtbox"]
+[editable path="stats"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dojm10vedpuc4"]
+
+[ext_resource type="Texture2D" uid="uid://ru4evvnrxeq6" path="res://Action RPG Resources/World/Tree.png" id="1_seuyo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ov43d"]
+radius = 11.0
+
+[node name="Tree" type="StaticBody2D"]
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+texture = ExtResource("1_seuyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ov43d")

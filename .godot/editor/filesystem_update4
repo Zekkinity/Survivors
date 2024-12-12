@@ -1,0 +1,15 @@
+res://Scenes/main.tscn
+res://Player/Player.tscn
+res://Enemy/enemy.tscn
+res://World/grass.tscn
+res://stats.tscn
+res://Effects/grassEffect.tscn
+res://bullet.tscn
+res://shootBullet.gd
+res://bullet.gd
+res://Scripts/cameraFollowMouse.gd
+res://Enemy/enemy.gd
+res://global.gd
+res://World/grass.gd
+res://Effects/GrassEfffect.gd
+res://LICENSE.md

@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtxt7o7rtr0nr"]
+
+[ext_resource type="Texture2D" uid="uid://dbt8kqfono75d" path="res://Action RPG Resources/Enemies/Bat.png" id="2_1jp8k"]
+[ext_resource type="PackedScene" uid="uid://dmxgkr22sgrrb" path="res://Overlap/hitbox.tscn" id="2_p5hc8"]
+
+[sub_resource type="GDScript" id="GDScript_c6rmk"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 5000
+@onready var player = get_node(\"/root/Main/Ei\")
+
+func _ready():
+	visible = false
+	$Hitbox/CollisionShape2D.disabled = true
+
+func _physics_process(delta):
+	var mouse_position = get_global_mouse_position()
+	
+	if Input.is_action_pressed(\"Space\"):
+		var distance = global_position.distance_to(mouse_position)
+		var max_distance = get_viewport_rect().size.length()
+		var exponential_factor = 1.0 - min(1.0, distance / max_distance)
+		var direction = (mouse_position - position).normalized()
+		var velocity_scale = 0.5
+		velocity = (1.0 - exponential_factor) * (direction * speed * velocity_scale)
+		visible = true
+		$Hitbox/CollisionShape2D.disabled = false
+		move_and_slide()
+		look_at(mouse_position)
+		
+
+	else:
+		# Get Ei Position
+		position = player.position
+
+		$Hitbox/CollisionShape2D.disabled = true
+		visible = false
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eqcso"]
+radius = 9.21954
+
+[node name="Lif" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = SubResource("GDScript_c6rmk")
+metadata/_edit_group_ = true
+
+[node name="Hitbox" parent="." instance=ExtResource("2_p5hc8")]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_eqcso")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1jp8k")
+hframes = 5
+
+[editable path="Hitbox"]
